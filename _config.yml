@@ -14,7 +14,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: time-machine
+theme: minimal-mistakes-jekyll
 gems:
   - jekyll-feed
 exclude:
