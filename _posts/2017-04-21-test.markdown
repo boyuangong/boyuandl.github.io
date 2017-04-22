@@ -1,0 +1,12 @@
+---
+layout:     post
+title:      "first blog"
+date:       2017-04-21 12:00:00
+author:     "Boyuan Gong"
+---
+
+# Hi, this is me
+<a href="#">
+    <img src="{{ site.baseurl }}/img/me.jpg" alt="selfiy">
+</a>
+<span class="caption text-muted">Boyuan Gong</span>

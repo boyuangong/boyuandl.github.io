@@ -1,42 +1,24 @@
-# The Micronaut's tuned So Simple Theme 
+#Clean Blog by Start Bootstrap - Jekyll Version
 
-The theme of Micronaut's blog is based upon the  **So Simple Theme**  by designer slash illustrator [Michael Rose](http://mademistakes.com).
+The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
 
-Micronaut's modified So Simple Theme is a minimalistic theme (across the same lines of the So Simple Theme) that offers simple and clean layout while emphasizing typography. Thus, the theme is ideal for sites and blogs that focus on content rather than on visual elements and delights.
+###[View Live Demo &rarr;](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
 
-See a [live Demo of Micronaut's tuned So Simple Theme](http://themicronaut.github.io/) hosted on GitHub.
+## Before You Begin
 
-See a [live version of the original So Simple Theme](http://mmistakes.github.io/so-simple-theme/) hosted on GitHub.
+In the _config.yml file, the base URL is set to /startbootstrap-clean-blog-jekyll which is this themes gh-pages preview. It's recommended that you remove the base URL before working with this theme locally!
 
-## Screenshots
-![example main page](https://raw.githubusercontent.com/TheMicronaut/micronaut-theme/master/images/main-page.png)
-![example post1](https://raw.githubusercontent.com/TheMicronaut/micronaut-theme/master/images/example-post1.png)
-![example post2](https://raw.githubusercontent.com/TheMicronaut/micronaut-theme/master/images/example-post2.png)
+It should look like this:
+`baseurl: ""`
 
-## Notable Extensions of the So Simple Theme:
-* Timeline
-* XML data loading and rendering
-* Central quotes
-* Text divider
-* Capital Letter in paragraphs
-* Recommended Posts
-* Instafeed.js Integration
-* Alternative list of posts
-* Live chat via Tawkto
+## What's Included
 
-For details on theme extensions, visit [theme-setup](http://themicronaut.github.io/theme-setup/#alehs-customizations)
+A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
 
-## Notable Modifications of the So Simple Theme:
-* Typography
-* Author's bio-photo adaptation
-* Images & Figcaptions
-* Footer content
+A Grunt environment is also included. There are a number of tasks it performs like minification of the JavaScript, compiling of the LESS files, adding banners to apply the MIT license, and watching for changes. Run the grunt default task by entering `grunt` into your command line which will build the files. You can use `grunt watch` if you are working on the JavaScript or the LESS.
 
-For details on theme modifications, visit [theme-setup](http://themicronaut.github.io/theme-setup/#alehs-customizations)
+You can run `jekyll serve --watch` and `grunt watch` at the same time to watch for changes and then build them all at once.
 
-## Getting Started
-So Simple takes advantage of Sass and data files to make customizing easier and requires Jekyll 3.x
+## Support
 
-To learn how to install and use this theme check out the [Setup Guide](http://themicronaut.github.io/theme-setup/) for more information.
-
-
+Visit Clean Blog's template overview page on Start Bootstrap at http://startbootstrap.com/template-overviews/clean-blog/ and leave a comment, email feedback@startbootstrap.com, or open an issue here on GitHub for support.
