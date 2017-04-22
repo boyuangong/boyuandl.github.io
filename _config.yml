@@ -1,25 +1,74 @@
-# Site settings
-title: Clean Blog
-header-img: img/home-bg.jpg
-email: your-email@yourdomain.com
-copyright_name: Your/Project/Corporate Name
-description: "Write your site description here. It will be used as your sites meta description as well!"
+# Site wide configuration
 
-url: "http://yourdomain.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  StartBootstrap
-email_username:  your-email@yourdomain.com
+title: Micronaut Tuned So Simple Theme
+locale: en_US
+timezone: CET
+description: Site Description
+logo: site-logo.svg
+search: true
+url: #your-site-url
+external_data_url: # common url for images and other external data
 
-# Google Analytics
-# To enable google analytics, uncomment below line with a valid Google Tracking ID
-# google_tracking_id:
+# Jekyll configuration
 
-# Build settings
-markdown: kramdown
+permalink:   /:categories/:title/
+markdown:    kramdown
 highlighter: rouge
-permalink: pretty
-paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-paginate
 
-gems: [jekyll-paginate, jekyll-feed]
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
+
+mathjax: true
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+paginate: 20
+paginate_path: /posts/page:num
+
+
+# Site owner
+owner:
+  name: Site Name
+  avatar: site-logo.png
+  email: #youremail
+  disqus-shortname: #your-disqus-shortname
+  twitter: #your-twitter-name
+  facebook: #username
+  github: #your-github-name
+  stackexchange: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  instagram:
+    user: #instagram-username
+    userId: #instagram-userId
+    clientId: #instagram-clientId
+  flickr: #username
+  tumblr: #tumblr-name
+  pinterest: #username
+  weibo: #userid
+  soundcloud: #soundcloud-name
+  mixcloud: #mixcloud-name
+  lastfm: #username
+  tawkto:
+    siteID: #tawkto-siteID
+  google:
+    plus:
+    analytics: #google-analytics-id
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
