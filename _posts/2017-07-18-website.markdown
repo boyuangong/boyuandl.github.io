@@ -1,17 +1,17 @@
 ---
 layout:     post
 title:      "Website or blog for AI and deep learning"
-date:       2017-06-18 12:00:00
+date:       2017-07-18 12:00:00
 author:     "Boyuan Gong"
 ---
 
-There are so many news and informations for current development on AI and deep learning. However, gathering it is also a massive work. I just write down some website I often use.\\
+There are so many news and informations for current development on AI and deep learning. However, gathering it is also a massive work. I just write down some website I often use.
 
 1. [Deep mind](https://www.deepmind.com "Google Deep Mind")
 2. [Open AI](https://blog.openai.com "Open AI")
 3. [Verge AI](https://www.theverge.com/ai-artificial-intelligence "Verge AI")
 
-Here are some news website in Chinese: \\
+Here are some news website in Chinese: 
 1. [机器之心](https://www.jiqizhixin.com "Ji qi zhi xin")
 
 
