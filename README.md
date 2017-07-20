@@ -1,3 +1,4 @@
-#Boyuan Gong Home Page
-[Home page address](boyuangong.github.io)
+#Boyuan Gong Home Page\\
+
+[Home page address](https://boyuangong.github.io)
 
