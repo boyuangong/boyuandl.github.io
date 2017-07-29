@@ -13,7 +13,8 @@ Top in general machine learning:
 2. [ICML](https://2017.icml.cc "International Conference on Machine Learning")
 3. [ICLR](https://www.iclr.cc "International Conference on Learning Representations")
 4. [AISTATS](http://www.aistats.org "International Conference on Artificial Intelligence and Statistics")
-5. [COLT](http://www.learningtheory.org/colt2017/the-conference/sponsors-2/ "Conference On Learning Theory")
+5. [COLT](http://www.learningtheory.org/colt2017/the-conference/sponsors-2/ "Conference On Learning Theory") 
+
 The last two is small conference but it's as good as the others.
 
 Region conference:
@@ -21,7 +22,7 @@ Region conference:
 
 
 
-Top in computer vision
+Top in computer vision:
 1. [CVPR](http://cvpr2017.thecvf.com "Conference on Computer Vision and Pattern Recognition")
 2. [ICCV](http://iccv2017.thecvf.com "International Conference on Computer Vision")
 3. [ECCV(2YEARS)](http://www.wikicfp.com/cfp/program?id=800&f=European "European Conference on Computer Vision")
