@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Website or blog for AI and deep learning"
-date:       2017-07-29 12:00:00
+title:      "Conference for AI and deep learning"
+date:       2017-07-29 16:00:00
 author:     "Boyuan Gong"
 ---
 
