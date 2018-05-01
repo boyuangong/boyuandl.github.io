@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Dehazing image with neural networks"
+title:      "Domain adaptation for MaskRCNN on haze images"
 date:       2018-02-19 16:00:00 
 author:     "Boyuan Gong"
 ---
@@ -11,15 +11,29 @@ The idea comes that whether we can use the detection architectures trained on th
 
 ### Domain Adaptation:
 
+#### Intuition
+
 The intuition is easy, we engraft a domain classifier on the feature maps (the output of certain layers, in the Mask RCNN, people usually choose the output of several layers from bot to top level as feature map). To make the feature maps distribution invariant, we only need to force the feature maps( as the input of the domain classifier ) to make the domain classifier has a large loss.
 
-However, the problem comes when we think about how to train the domain classifier. If we first train a 
+#### Training
+
+However, the problem comes when we think about how to train the domain classifier. The loss function we use can be divide into two parts:
+
+$L_{loss} = L_y+L_d$
+
+Because we want the feature maps to increase the $L_d$. So during the gradient descent, we need to update the weights as:
+
+$\theta_f = \theta_f + \partial L_d / \partial \theta_f$
+
+When comes to $L_y$, we need the weights of $\theta_f$ be updated as:
+
+$\theta_f = \theta+f - \partial L_y / \partial \theta_f$
+
+So at the first thought, we may wish to train the two independently. Because when training for domain classifier, what we can do is use a negative loss function. And fix the classifier weights $\theta_d$. This is easy to implement, however, it cannot ensure a converge. Thus the training idea is that we use the whole loss $L_{loss}$ but we add a **gradient reverse layer** between the feature map layers and the input layer of domain classifier. Thus the parameters can update simultaneously. Problem solved!
 
 ![omai](E:\personal_web\boyuangong.github.io\img\Dehaze\domain.png)
 
-*fdafdas*
-
-
+​								*Domain adaptation structure*
 
 ```
 <p align="center">
@@ -27,3 +41,31 @@ However, the problem comes when we think about how to train the domain classifie
 </p>
 
 ```
+
+### Implementation details on MaskRCNN
+
+The batch size of the training in Mask RCNN usually set to one. However, it cannot used for domain adaptation. So we use the batch size = 2. We split the feature maps during the training phase. Only half of it goes for the Mask RCNN training loss. But all of it goes to the domain classification loss. 
+
+The structure we use is as follows:
+
+![askrcn](E:\personal_web\boyuangong.github.io\img\Dehaze\maskrcnn.png)
+
+And for the domain classifier the structure is as follows:
+
+![omain_classifie](E:\personal_web\boyuangong.github.io\img\Dehaze\domain_classifier.png)
+
+### Results and analysis
+
+We use a pretrained model on COCO dataset. And we train the domain adaptation with COCO dataset and the unannotated realistic haze images from [RESIDE dataset](https://sites.google.com/view/reside-dehaze-datasets) for 50k iteration with learning rate 0.001 and 20k iteration with learning rate 0.0001. Then we test the result on the Real world task driven testing set(RTTS) in the REISDE dataset. The best result comes as follows.
+
+
+|                   |  mAP  |
+|:-----------------:|:-----:|
+|      MaskRCNN     | 61.01 |
+|     DMaskRCNN     | 61.21 |
+|  MSCC + Mask RCNN | 62.72 |
+| MSCC + DMask RCNN | 62.71 |
+
+([MSCC](https://sites.google.com/site/renwenqi888/research/dehazing/mscnndehazing) is a dehazing method)
+
+The result shows that domain training improved the result a little bit. But not very much. The reason may be the model has been well trained before and the mAP limitation may comes from the model itself, which means that even test the model on COCO dataset, the mAP may still not very high. (We test 100 images the mAP is about 61.7). For the MSCC result, because the domain MaskRCNN is trained on haze images, it still have a gap from the  dehazed images. 
