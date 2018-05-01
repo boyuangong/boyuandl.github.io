@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Domain adaptation for MaskRCNN on haze images"
-date:       2018-02-19 16:00:00 
+date:       2018-04-30 16:00:00 
 author:     "Boyuan Gong"
 use_math: true
 ---
@@ -67,3 +67,4 @@ We use a pretrained model on COCO dataset. And we train the domain adaptation wi
 ([MSCC](https://sites.google.com/site/renwenqi888/research/dehazing/mscnndehazing) is a dehazing method)
 
 The result shows that domain training improved the result a little bit. But not very much. The reason may be the model has been well trained before and the mAP limitation may comes from the model itself, which means that even test the model on COCO dataset, the mAP may still not very high. (We test 100 images the mAP is about 61.7). For the MSCC result, because the domain MaskRCNN is trained on haze images, it still have a gap from the  dehazed images. 
+
