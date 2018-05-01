@@ -31,7 +31,7 @@ $\theta_f = \theta+f - \partial L_y / \partial \theta_f$
 
 So at the first thought, we may wish to train the two independently. Because when training for domain classifier, what we can do is use a negative loss function. And fix the classifier weights $\theta_d$. This is easy to implement, however, it cannot ensure a converge. Thus the training idea is that we use the whole loss $L_{loss}$ but we add a **gradient reverse layer** between the feature map layers and the input layer of domain classifier. Thus the parameters can update simultaneously. Problem solved!
 
-![omai](img\Dehaze\domain.png)
+![omai](img/Dehaze/domain.png)
 
 ​								*Domain adaptation structure*
 
@@ -43,11 +43,11 @@ The batch size of the training in Mask RCNN usually set to one. However, it cann
 
 The structure we use is as follows:
 
-![askrcn](img\Dehaze\maskrcnn.png)
+![askrcn](img/Dehaze/maskrcnn.png)
 
 And for the domain classifier the structure is as follows:
 
-![omain_classifie](img\Dehaze\domain_classifier.png)
+![omain_classifie](img/Dehaze/domain_classifier.png)
 
 ### Results and analysis
 
