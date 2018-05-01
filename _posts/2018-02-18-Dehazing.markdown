@@ -3,7 +3,10 @@ layout:     post
 title:      "Domain adaptation for MaskRCNN on haze images"
 date:       2018-02-19 16:00:00 
 author:     "Boyuan Gong"
+use_math: true
 ---
+
+
 
 The motivation of this project can be separate into two main reasons. First is the increase of haze time on developing country like China. Second is that the haze image dataset is small, not to mention the annotated datasets.
 
