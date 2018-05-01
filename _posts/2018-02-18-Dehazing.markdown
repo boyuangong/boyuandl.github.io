@@ -5,7 +5,25 @@ date:       2018-02-19 16:00:00
 author:     "Boyuan Gong"
 ---
 
-I will present more detail later.
+The motivation of this project can be separate into two main reasons. First is the increase of haze time on developing country like China. Second is that the haze image dataset is small, not to mention the annotated datasets.
+
+The idea comes that whether we can use the detection architectures trained on the public datasets like COCO or VOC and use it to the haze dataset. Then it comes to a major problem is that the distribution of the haze dataset and COCO or VOC dataset is slightly different (but have some in common). The problem comes out is that whether we can force the model to learn some model invariant (distribution invariant) features. Then it comes the domain adaptation method.
+
+### Domain Adaptation:
+
+The intuition is easy, we engraft a domain classifier on the feature maps (the output of certain layers, in the Mask RCNN, people usually choose the output of several layers from bot to top level as feature map). To make the feature maps distribution invariant, we only need to force the feature maps( as the input of the domain classifier ) to make the domain classifier has a large loss.
+
+However, the problem comes when we think about how to train the domain classifier. If we first train a 
+
+![omai](E:\personal_web\boyuangong.github.io\img\Dehaze\domain.png)
+
+*fdafdas*
 
 
 
+```
+<p align="center">
+	![omai](img\Dehaze\domain.png)
+</p>
+
+```
